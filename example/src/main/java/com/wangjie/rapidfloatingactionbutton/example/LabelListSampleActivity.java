@@ -31,6 +31,14 @@ public class LabelListSampleActivity extends AppCompatActivity implements RapidF
         setContentView(R.layout.label_list_sample);
         rfaLayout = (RapidFloatingActionLayout) findViewById(R.id.label_list_sample_rfal);
         rfaButton = (RapidFloatingActionButton) findViewById(R.id.label_list_sample_rfab);
+
+        rfaButton.setNormalColor(0xff37474f);
+        rfaButton.setPressedColor(0xff263238);
+        rfaButton.getRfabProperties().setShadowDx(RFABTextUtil.dip2px(this, 1));
+        rfaButton.getRfabProperties().setShadowDy(RFABTextUtil.dip2px(this, 1));
+        rfaButton.getRfabProperties().setShadowRadius(RFABTextUtil.dip2px(this, 1));
+        rfaButton.getRfabProperties().setShadowColor(0xffcccccc);
+        rfaButton.build();
         /*
         // 可通过代码设置属性
         rfaLayout.setFrameColor(Color.RED);
@@ -38,9 +46,7 @@ public class LabelListSampleActivity extends AppCompatActivity implements RapidF
 
         rfaButton.setNormalColor(0xff37474f);
         rfaButton.setPressedColor(0xff263238);
-        rfaButton.getRfabProperties().setShadowDx(ABTextUtil.dip2px(this, 3));
-        rfaButton.getRfabProperties().setShadowDy(ABTextUtil.dip2px(this, 3));
-        rfaButton.getRfabProperties().setShadowRadius(ABTextUtil.dip2px(this, 5));
+
         rfaButton.getRfabProperties().setShadowColor(0xffcccccc);
         rfaButton.getRfabProperties().setStandardSize(RFABSize.MINI);
         rfaButton.build();
@@ -85,9 +91,9 @@ public class LabelListSampleActivity extends AppCompatActivity implements RapidF
         );
         rfaContent
                 .setItems(items)
-                .setIconShadowRadius(RFABTextUtil.dip2px(this, 5))
+                .setIconShadowRadius(RFABTextUtil.dip2px(this, 1))
                 .setIconShadowColor(0xff888888)
-                .setIconShadowDy(RFABTextUtil.dip2px(this, 5))
+                .setIconShadowDy(RFABTextUtil.dip2px(this, 1))
         ;
 
         rfabHelper = new RapidFloatingActionHelper(
