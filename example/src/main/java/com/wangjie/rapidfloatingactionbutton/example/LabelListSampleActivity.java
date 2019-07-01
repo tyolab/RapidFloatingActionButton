@@ -30,6 +30,9 @@ public class LabelListSampleActivity extends AppCompatActivity implements RapidF
         super.onCreate(savedInstanceState);
         setContentView(R.layout.label_list_sample);
         rfaLayout = (RapidFloatingActionLayout) findViewById(R.id.label_list_sample_rfal);
+        rfaLayout.setFrameColor(Color.RED);
+        rfaLayout.setFrameAlpha(0.4f);
+
         rfaButton = (RapidFloatingActionButton) findViewById(R.id.label_list_sample_rfab);
 
         rfaButton.setNormalColor(0xff37474f);
@@ -41,8 +44,6 @@ public class LabelListSampleActivity extends AppCompatActivity implements RapidF
         rfaButton.build();
         /*
         // 可通过代码设置属性
-        rfaLayout.setFrameColor(Color.RED);
-        rfaLayout.setFrameAlpha(0.4f);
 
         rfaButton.setNormalColor(0xff37474f);
         rfaButton.setPressedColor(0xff263238);
